@@ -1,6 +1,7 @@
 import { NavLink, Route, Routes } from "react-router-dom";
 import NewRegisterForm from "./components/newRegisterForm";
 import FeedbackList from "./components/FeedbackList";
+import FeedbackDetails from "./components/FeedbackDetails";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<NewRegisterForm />} />
         <Route path="/feedbacks" element={<FeedbackList />} />
+        <Route path="/feedbacks/:id" element={<FeedbackDetails />} />
       </Routes>
     </div>
   );
