@@ -6,7 +6,7 @@ const FeedbackDetails = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`https://68f26f07b36f9750deeca125.mockapi.io/feedback/${id}`)
+    fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
@@ -16,7 +16,7 @@ const FeedbackDetails = () => {
     <div>
       <div>
         {data && <h2>name: {data.name}</h2>}
-        {data && <h2>first name: {data.firstName}</h2>}
+        {data && <h2>first name: {data.username}</h2>}
         {data && <h2>last name: {data.lastName}</h2>}
         {data && <h2>created at: {data.createdAt}</h2>}
         {data && <h2>phone number: {data.phone}</h2>}
